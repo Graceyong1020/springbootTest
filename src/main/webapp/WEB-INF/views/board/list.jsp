@@ -23,7 +23,8 @@
                 <c:forEach items="${boardList}" var="dto">
                     <tr>
                         <th scope="row">${dto.bno}</th>
-                        <td><a href="/todo/read?tno=${dto.bno}" class="text-decoration-none" data-tno="${dto.bno}">${dto.title}</a></td>
+                        <td><a href="/board/read?bno=${dto.bno}" class="text-decoration-none" data-bno="${dto.bno}">
+                                ${dto.title}</a></td>
                         <td>${dto.writer}</td>
                         <td>${dto.postdate}</td>
                         <td>${dto.visitcount}</td>

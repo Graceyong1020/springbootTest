@@ -48,7 +48,7 @@ public class BoardController {
     public String modifyPost(BoardDTO boardDTO) {
         log.info("modifyPost");
         boardService.modify(boardDTO);
-        return "redirect:/board/read";
+        return "redirect:/board/read?bno=" + boardDTO.getBno();
     } //수정된 내용을 다시 read로 보내기 위해 redirect 사용
 
     @GetMapping("/remove")
