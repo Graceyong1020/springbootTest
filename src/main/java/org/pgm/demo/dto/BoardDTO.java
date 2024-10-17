@@ -18,5 +18,5 @@ public class BoardDTO {
     private String content;
     private String writer;
     private Date postdate;
-    private int visitCount;
+    private int visitcount;
 }

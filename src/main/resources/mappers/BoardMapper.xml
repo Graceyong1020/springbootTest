@@ -6,4 +6,19 @@
     <select id="selectAll" resultType="org.pgm.demo.dto.BoardDTO">
         select * from tbl_board
     </select>
+    <select id="selectOne" resultType="BoardDTO">
+        select * from tbl_board where bno=#{bno}
+    </select>
+    <insert id="insert">
+        insert into tbl_board(title, content, writer) values(#{title}, #{content}, #{writer})
+    </insert>
+    <update id="update">
+        update tbl_board set title=#{title}, content=#{content}, writer=#{writer} where bno=#{bno}
+    </update>
+    <delete id="delete">
+        delete from tbl_board where bno=#{bno}
+    </delete>
+    <update id="visitCountUpdate"> <!-- 방문수 증가 -->
+        update tbl_board set visitCount=visitCount+1 where bno=#{bno}
+    </update>
 </mapper>
